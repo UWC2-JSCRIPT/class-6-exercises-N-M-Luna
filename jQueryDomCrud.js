@@ -2,6 +2,10 @@ $( document ).ready( function() {
     console.log("Testing 1 2 3")
 // Create a new <a> element containing the text "Buy Now!"
 // with an id of "cta" after the last <p>
+const $newElem = $('<a>')
+    .text('Buy now!')
+    .attr('id', 'cta')
+$('main').append($newElem) 
 
 // Access (read) the data-color attribute of the <img>,
 // log to the console
