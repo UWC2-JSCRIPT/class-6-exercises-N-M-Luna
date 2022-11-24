@@ -11,6 +11,9 @@ console.log(imgColor)
 
 // Update the third <li> item ("Turbocharged"),
 // set the class name to "highlight"
+const $li = $('li')
+const thirdLI = $li[2]
+thirdLI.setAttribute('class', 'highlight')
 
 // Remove (delete) the last paragraph
 // (starts with "Available for purchase now…")
