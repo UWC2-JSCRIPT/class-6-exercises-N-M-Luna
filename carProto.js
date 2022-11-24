@@ -3,9 +3,6 @@
  * @constructor
  * @param {String} model
  */
-
-//  Create an instance, accelerate twice, brake once, and console log the instance.toString()
-
 //Car constructor
 class Car {
     constructor(model) {
@@ -22,14 +19,15 @@ class Car {
     }
   
     toString() { 
-      return `It's a ${this.model}, driving at ${this.currentSpeed} units of speed.`
+      return `It's a ${this.model}, driving at ${this.currentSpeed} unit(s) of speed.`
     }
 }
 
+// Create an instance, accelerate twice, brake once, and console log the instance.toString()
 const myFirstCar = new Car('Tercel')
 myFirstCar.accelerate()
 myFirstCar.accelerate()
-myFirstCar.break()
+myFirstCar.brake()
 console.log(myFirstCar.toString())
 
 /**
@@ -37,5 +35,24 @@ console.log(myFirstCar.toString())
  * @constructor
  * @param {String} model
  */
+// Electric car constructor
+class ElectricCar extends Car {
+    constructor(model) {
+        super(model)
+        this.motor = 'electric'
+    }
+
+    accelerate() {
+        super.accelerate()
+        super.accelerate()
+    }
+
+    toString() {
+        console.log(`An electric ${this.model} is driving at ${this.currentSpeed} unit(s) of speed.`)
+    }
+}
 
 //  Create an instance, accelerate twice, brake once, and console log the instance.toString()
+const teslaCar =  new ElectricCar('Tesla')
+teslaCar.accelerate()
+teslaCar.toString()
