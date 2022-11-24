@@ -1,3 +1,5 @@
+$( document ).ready( function() {
+    console.log("Testing 1 2 3")
 // Create a new <a> element containing the text "Buy Now!"
 // with an id of "cta" after the last <p>
 
@@ -13,3 +15,5 @@
 // Create a listener on the "Buy Now!" link that responds to a click event.
 // When clicked, the the "Buy Now!" link should be removed
 // and replaced with text that says "Added to cart"
+
+})
