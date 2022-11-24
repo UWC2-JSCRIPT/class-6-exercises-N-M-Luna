@@ -21,6 +21,8 @@ thirdLI.setAttribute('class', 'highlight')
 
 // Remove (delete) the last paragraph
 // (starts with "Available for purchase now…")
+const $paragraphs = $('p')
+$paragraphs.remove()
 
 // Create a listener on the "Buy Now!" link that responds to a click event.
 // When clicked, the the "Buy Now!" link should be removed
