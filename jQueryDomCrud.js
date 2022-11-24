@@ -1,5 +1,4 @@
 $( document ).ready( function() {
-    console.log("Testing 1 2 3")
     // Create a new <a> element containing the text "Buy Now!"
     // with an id of "cta" after the last <p>
     const $ctaElement = $('<a>')
@@ -28,6 +27,13 @@ $( document ).ready( function() {
     // When clicked, the the "Buy Now!" link should be removed
     // and replaced with text that says "Added to cart"
     $ctaElement.click(function() {
-        $(this).text('Added to cart')
+        const $newText = $('<p>')
+            .text('Added to cart')
+        $('main').append($newText)
+        $(this).remove()
     })
+    /* This only replaces the text inside the #cta element.
+    $ctaElement.click(function() {
+        $(this).text('Added to cart')
+    })*/
 })
