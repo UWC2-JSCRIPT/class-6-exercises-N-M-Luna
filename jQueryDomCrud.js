@@ -5,6 +5,9 @@ $( document ).ready( function() {
 
 // Access (read) the data-color attribute of the <img>,
 // log to the console
+const $img = $(`img`)
+const imgColor = $img.data(`color`)
+console.log(imgColor)
 
 // Update the third <li> item ("Turbocharged"),
 // set the class name to "highlight"
