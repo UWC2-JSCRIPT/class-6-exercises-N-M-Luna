@@ -2,6 +2,14 @@
  * Toggles "done" class on <li> element
  */
 
+//Get all LI elements
+const $li = $('li')
+
+//Click event listener
+$li.click(function() {
+  $( this ).toggleClass(`done`)
+})
+
 /**
  * Delete element when delete link clicked
  */
