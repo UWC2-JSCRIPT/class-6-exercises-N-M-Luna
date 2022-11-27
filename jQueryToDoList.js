@@ -1,3 +1,4 @@
+$.when( $.ready ).then(function() {
 /**
  * Toggles "done" class on <li> element
  */
@@ -55,3 +56,5 @@ const addListItem = function(e) {
 
 // Add listener for .add-item A tag
 $('.add-item').click(addListItem)
+
+})
