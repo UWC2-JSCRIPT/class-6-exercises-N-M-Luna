@@ -20,7 +20,7 @@ const addDeleteEvent = function() {
     // grab the LI that contains it
     const $unwantedItem = $(this).parent()
     // and delete it
-    $unwantedItem.remove()
+    $unwantedItem.fadeOut()
   })
 }
 addDeleteEvent()
