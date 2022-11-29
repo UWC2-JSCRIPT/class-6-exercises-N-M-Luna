@@ -2,19 +2,16 @@ $.when($.ready).then(function () {
   /**
    * Toggles "done" class on <li> element
    */
-  const addDoneEvent = function () {
     // When an LI element is clicked,
     $('li').click(function () {
       //toggle its "done" class
       $(this).toggleClass(`done`)
     })
-  }
-  addDoneEvent()
 
   /**
    * Delete element when delete link clicked
    */
-  const addDeleteEvent = function () {
+  
     // When a .delete A tag is clicked,
     $('.delete').click(function () {
       // grab the LI that contains it
@@ -22,8 +19,6 @@ $.when($.ready).then(function () {
       // and delete it
       $unwantedItem.fadeOut()
     })
-  }
-  addDeleteEvent()
 
   /**
    * Adds new list item to <ul>
@@ -41,6 +36,14 @@ $.when($.ready).then(function () {
       .text('Delete')
       .addClass('delete')
 
+    // Add click listener to delete button
+    $deleteBtn.click(function () {
+      // grab the LI that contains it
+      const $unwantedItem = $(this).parent()
+      // and delete it
+      $unwantedItem.fadeOut()
+    })
+
     // Build the new element.
     const $newItem = $('<li>')
       .append($description)
@@ -49,9 +52,11 @@ $.when($.ready).then(function () {
     // Place it at the end of the UL tag
     $('ul').append($newItem)
 
-    // Add event listeners to the new items
-    addDoneEvent()
-    addDeleteEvent()
+    // Add event listeners to the new list item
+    $newItem.click(function () {
+      //toggle its "done" class
+      $(this).toggleClass(`done`)
+    })
   };
 
   // Add listener for .add-item A tag
