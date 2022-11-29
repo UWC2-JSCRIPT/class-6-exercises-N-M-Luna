@@ -14,3 +14,8 @@ infoBtn.addEventListener('click', (e) => {
 
 // When the bark button is clicked, should alert "Bow wow!"
 // Should *not* alert "meow"
+const barkBtn = document.querySelector('#dog')
+barkBtn.addEventListener('click', (e) => {
+  alert('Bow wow!');
+  e.stopPropagation();
+})
